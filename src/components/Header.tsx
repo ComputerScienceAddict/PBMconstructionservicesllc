@@ -18,7 +18,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b-4 border-[var(--accent)] shadow-[0_4px_0_0_rgba(161,31,31,0.3)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14 sm:h-20 min-h-[56px]">
-          <Link href="#" className="flex items-center flex-shrink-0">
+          <Link href="#" className="flex items-center gap-3 flex-shrink-0">
             <Image
               src="/images/pbm-logo.png"
               alt="PBM Construction Services LLC"
@@ -26,6 +26,10 @@ export default function Header() {
               height={60}
               className="h-10 sm:h-14 w-auto object-contain"
             />
+            <span className="font-[family-name:var(--font-display)] text-white text-base sm:text-xl tracking-wide">
+              <span className="sm:hidden">PBM Construction</span>
+              <span className="hidden sm:inline">PBM Construction Services LLC</span>
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
