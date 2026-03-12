@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --bg-warm: #e8e4df;
+  --bg-paper: #d4cfc7;
+  --bg-dark: #1a1614;
+  --text-dark: #1a1614;
+  --text-muted: #5c5349;
+  --accent: #a11f1f;
+  --accent-hover: #7a1818;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  font-family: var(--font-body), Georgia, "Times New Roman", serif;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Weathered paper / concrete texture - visible, not subtle */
+.texture-paper {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 768px) {
+  [id] {
+    scroll-margin-top: 4.5rem;
+  }
+}
